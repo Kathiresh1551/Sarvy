@@ -1,0 +1,65 @@
+.headerImg {
+    width: 100%;
+}
+.tabContainer {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+.Tabs {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.tabName {
+    padding: 0px 75px 0px 75px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;   
+}
+.activeTab {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 5px 35px 5px 35px;
+    margin: 0px 45px 0px 45px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.company {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+}
+
+.desc {
+    width: 80%;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    margin-top: 30px;
+}
+
+.companyDetails {
+    display: flex;
+    justify-content: space-around;
+    align-content: center !important;
+}
+
+.companyName {
+    font-size: 55px;
+    font-weight: 600;
+    color: white;
+
+    line-height: 100px;
+    letter-spacing: 10px;
+}
+
+.logoName {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    line-height: 40px;
+}
