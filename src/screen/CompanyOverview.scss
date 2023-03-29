@@ -1,0 +1,39 @@
+.slider {
+    position: initial;
+
+    button::before {
+        // color: #36CABC !important;
+        // font-size: 40px;
+        .slick-next {
+            padding-left: 15px;
+        }
+    }
+
+    ul {
+        margin-top: 10px !important;
+
+        li {
+
+            button::before {
+                font-size: 1.2vw;
+                color: #36CABC !important;
+            }
+        }
+    }
+}
+
+.companyOverview {
+    width: 75%;
+}
+
+.title {
+    font-family: 'Sofia Sans' !important;
+    font-size: 30px;
+}
+
+.content {
+    padding-top: 25px;
+    padding-left: 50px;
+    font-size: 20px;
+    text-align: justify;
+}

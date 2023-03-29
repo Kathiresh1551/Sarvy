@@ -1,0 +1,29 @@
+.applications {
+    width: 100%;
+}
+.applicationContainer {
+    display: flex !important;
+    justify-content: center !important;
+}
+.applicationBG {
+    margin-top: 15px !important;
+    width: 40%;
+    background-color: #a09fcf;
+    padding: 10px 0px 10px 150px !important;
+    border-radius: 30px !important;
+}
+.applicationName {
+    font-family: 'Sofia Sans' !important;
+    font-size: 30px;
+    padding-top: 15px;
+}
+.desc {
+    width: 100% !important;
+    color: black !important;
+    padding-top: 15px;
+}
+.operations {
+    margin-top: 15px;
+    font-family: 'Sofia Sans' !important;
+    font-size: 20px !important;
+}

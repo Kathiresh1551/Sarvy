@@ -1,22 +1,31 @@
+import { Tab, Tabs } from "@mui/material";
 import React, { useState } from "react";
 import HomeBg from '../assets/images/HomeHeader.png';
 import logo from '../assets/images/logo.png';
+import CompanyOverview from "./CompanyOverview";
+import Applications from './Applications';
 import './Homepage.scss';
 
 const Homepage = () => {
-    const [activeTab, setActiveTab] = useState('home')
+    const [activeTab, setActiveTab] = useState('home');
+    const [subTab, setSubTab] = useState('about')
 
 
     const handleSelectedTab = (tab) => {
         setActiveTab(tab)
     }
 
+    const handleSubTabChange = (ele, newValue) => {
+        setSubTab(newValue)
+    }
+
     return (
         <>
+            
+            <div className="header">
+                <img src={HomeBg} className="headerImg" alt="header" />
+            </div>
             <div className="homePage">
-                <div className="header">
-                    <img src={HomeBg} className="headerImg" alt="header" />
-                </div>
                 <div className="tabContainer">
                     <div className="Tabs">
                         <div className={activeTab === 'home' ? "activeTab" : "tabName"} onClick={() => handleSelectedTab('home')}>
@@ -50,8 +59,8 @@ const Homepage = () => {
                                 INDUSTRIES
                             </div>
 
-                            <div className="desc">
-                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo
+                            <div className="description">
+                                Providing high in class fluid management solutions for the society to conserve nature resources.
                             </div>
                         </div>
 
@@ -67,8 +76,33 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
+
+                <div className="subTabContainer">
+                    <div className="subTab">
+                        <Tabs 
+                            value={subTab}
+                            onChange={handleSubTabChange}
+                            textColor="black"
+                            indicatorColor="secondary"
+                            aria-label="secondary tabs example"
+                        >
+                            <Tab value='about' label="About" />
+                            <Tab value='services' label="Services" />
+                            <Tab value='application' label="Application" />
+                        </Tabs>
+                    </div>
+                </div>
+
+                <div className="companyOverview">
+                    <CompanyOverview />
+                </div>
+
+                <div className="applications">
+                    <Applications />
+                </div>
+
+                
             </div>
         </>
     )
