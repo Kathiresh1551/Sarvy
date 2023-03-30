@@ -1,13 +1,24 @@
 .applications {
     width: 100%;
 }
+.wrappedBg {
+    display: flex;
+}
+.appImg {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    left: 100px;
+    top: 68px;
+}
 .applicationContainer {
     display: flex !important;
     justify-content: center !important;
+    width: 70% !important;
 }
 .applicationBG {
     margin-top: 15px !important;
-    width: 40%;
+    width: 100% !important;
     background-color: #a09fcf;
     padding: 10px 0px 10px 150px !important;
     border-radius: 30px !important;

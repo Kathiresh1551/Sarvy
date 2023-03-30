@@ -5,7 +5,7 @@ const CompanyOverview = () => {
     return (
         <>
             <div>
-                {/* <Slider
+                <Slider
                     dots={true}
                     infinite={true}
                     slidesToShow={1}
@@ -16,16 +16,8 @@ const CompanyOverview = () => {
                     cssEase="linear"
                     className="slider"
                 >
-                    <div>
-                        <h1>Img-1</h1>
-                    </div>
-                    <div>
-                        <h1>Img-2</h1>
-                    </div>
-                    <div>
-                        <h1>Img-2</h1>
-                    </div>
-                </Slider> */}
+                    
+                </Slider>
 
                 <div className="companyOverview">
                     <div className="title">

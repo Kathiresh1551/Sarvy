@@ -1,17 +1,41 @@
 import { Tab, Tabs } from "@mui/material";
 import React, { useState } from "react";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import HomeBg from '../assets/images/HomeHeader.png';
 import logo from '../assets/images/logo.png';
+import Manufacturing from '../assets/images/Manufacturing.png';
+import Installation from '../assets/images/Installation.png';
+import Repairing from '../assets/images/Repairing.png';
 import CompanyOverview from "./CompanyOverview";
 import Applications from './Applications';
+import Footer from '../globals/Footer';
 import './Homepage.scss';
+import Slider from "react-slick";
 
-const Homepage = () => {
+const Homepage = (props) => {
     const [activeTab, setActiveTab] = useState('home');
     const [subTab, setSubTab] = useState('about')
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
 
     const handleSelectedTab = (tab) => {
+        const { history } = props;
+        if (tab === 'products') {
+            history.push('/products')
+        } else if (tab === 'application') {
+            history.push('/applications')
+        } else if (tab === 'about') {
+            history.push('/aboutUs')
+        } else if (tab === 'contact') {
+            history.push('./contactUs')
+        }
         setActiveTab(tab)
     }
 
@@ -94,16 +118,40 @@ const Homepage = () => {
                     </div>
                 </div>
 
+                <div>
+                <Slider {...settings}>
+                    <div>
+                    <img className="serviceImgs" src={Manufacturing} />
+                    </div>
+                    <div>
+                        <img className="serviceImgs" src={Installation} />
+                    </div>
+                    <div>
+                        <img className="serviceImgs" src={Repairing} />
+                    </div>
+                </Slider>
+                </div>
+
                 <div className="companyOverview">
                     <CompanyOverview />
                 </div>
 
                 <div className="applications">
                     <Applications />
-                </div>
+                </div> 
 
-                
+                <div className="services">
+                <div className="title">Services</div>
+                    <div className="servicesContainer">
+                        <div className="servicesImg">
+                            <img className="serviceImgs" src={Manufacturing} />
+                            <img className="serviceImgs" src={Installation} />
+                            <img className="serviceImgs" src={Repairing} />
+                        </div>
+                    </div>
+                </div>  
             </div>
+                <Footer />
         </>
     )
 }

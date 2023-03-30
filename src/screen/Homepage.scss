@@ -1,5 +1,9 @@
 @import "../assets/scss/main.scss";
 
+.homePage {
+    width: 100%;
+    overflow: hidden;
+}
 .headerImg {
     width: 100%;
 }
@@ -100,4 +104,29 @@
 .applications {
     padding-bottom: 50px;
     padding-left: 30px;
+}
+.services {
+    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.title {
+    font-family: 'Sofia Sans' !important;
+    font-size: 30px !important;
+}
+.serviceImgs {
+    display: flex;
+    justify-content: space-between;
+}
+.servicesContainer {
+    margin-top: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // padding: 15px 30px 15px 30px;
+}
+.servicesImg {
+    width: 80%;
+    display: flex !important;
+    justify-content: space-between !important;
 }
