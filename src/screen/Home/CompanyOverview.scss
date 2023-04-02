@@ -32,6 +32,15 @@
 }
 
 .content {
+    padding: 15px 0px 0px 25px;
     font-size: 20px;
     text-align: justify;
+    width: 50%;
 }
+
+.slider-arrow {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }

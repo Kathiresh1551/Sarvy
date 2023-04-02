@@ -1,8 +1,47 @@
 .Footer {
     width: 100% !important;
-    // background-image: url('../assets/images/DupeFooterBG.png');
-    // margin-top: 30px;
 }
 .footerBg {
     width: 100% !important;
+}
+
+.logoContent {
+    margin-top: -210px;
+    display: flex;
+}
+.companyInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    line-height: 40px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.sarvy {
+    font-family: 'Sofia Sans' !important;
+    font-size: 40px;
+}
+.footerLogo {
+    width: 30%;
+}
+.visitUS {
+    display: flex;
+    justify-content: center;
+}
+.logoAndName {
+    display: flex;
+    justify-content: flex-start;
+}
+.visitUS {
+    display: flex !important;
+    justify-content: center !important;
+    width: 35%;
+    color: white;
+}
+.address {
+    display: flex !important;
+    justify-content: flex-end !important;
+    width: 20%;
+    color: white;
 }

@@ -1,0 +1,74 @@
+.ProductCardsContainer {
+    width: auto;
+}
+.ourProducts {
+    // padding: 0px 100px 0px 100px;
+    width: 98%;
+}
+.productSlider {
+    // position: initial;
+}
+.productCards {
+    width: 300px;
+    background-color: #F7F7F7;
+    border-radius: 5px;
+
+}
+.productDescCard {
+    padding: 30px;
+}
+.productNoLabel {
+    display: flex;
+    justify-content: center;
+}
+.productCount {
+    display: flex;
+    justify-content: center;
+}
+.productNo {
+    background: linear-gradient(to right, #6d1851, #373082) !important;;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border-radius: 5px;
+}
+.productImage {
+   display: flex;
+   justify-content: center;
+//    background-color: #F7F7F7;
+   padding: 15px;
+//    width: 50%;
+}
+.COM {
+    display: flex;
+    font-family: 'Sofia Sans';
+    line-height: 50px;
+}
+.title {
+    font-weight: 400;
+    font-size: 20px;
+}
+.COMdesc {
+    // font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 15px;
+
+}
+.COMContainer {
+    display: flex !important;
+    justify-content: flex-end !important;
+    flex-direction: column !important;
+    // align-items: center;
+    text-align: left !important;
+    width: 98%;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+.COMHeading {
+    padding-left: 100px;
+    font-family: 'Sofia Sans' !important;
+    font-size: 30px;
+    padding-top: 100px;
+}

@@ -5,23 +5,23 @@
     display: flex;
 }
 .appImg {
-    width: 30%;
-    height: 50%;
+    // width: 40%;
+    // height: 20%;
     position: relative;
-    left: 100px;
-    top: 68px;
+    left: 130px;
+    margin-left: 100px;
+    margin-top: 125px;
+    // top: 68px;
 }
 .applicationContainer {
     display: flex !important;
-    justify-content: center !important;
-    width: 70% !important;
     margin: auto;
 }
 .applicationBG {
     margin-top: 15px !important;
-    width: 100% !important;
+    width: 60% !important;
     background-color: #a09fcf;
-    padding: 10px 0px 10px 10px !important;
+    padding: 10px 0px 10px 150px !important;
     border-radius: 30px !important;
 }
 .applicationName {
@@ -38,4 +38,8 @@
     margin-top: 15px;
     font-family: 'Sofia Sans' !important;
     font-size: 20px !important;
+}
+.applicationContent {
+    display: flex;
+    width: 100%;
 }
