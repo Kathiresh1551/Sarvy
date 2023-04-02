@@ -97,8 +97,7 @@
 }
 
 .companyOverview {
-    padding-bottom: 50px;
-    padding-left: 30px;
+    padding: 2em;
 }
 
 .applications {
@@ -129,4 +128,11 @@
     width: 80%;
     display: flex !important;
     justify-content: space-between !important;
+}
+.imgHolder{
+    display: flex !important;
+    justify-content: center !important;	
+    img{
+        width: 40% !important;
+    }
 }

@@ -15,12 +15,13 @@
     display: flex !important;
     justify-content: center !important;
     width: 70% !important;
+    margin: auto;
 }
 .applicationBG {
     margin-top: 15px !important;
     width: 100% !important;
     background-color: #a09fcf;
-    padding: 10px 0px 10px 150px !important;
+    padding: 10px 0px 10px 10px !important;
     border-radius: 30px !important;
 }
 .applicationName {

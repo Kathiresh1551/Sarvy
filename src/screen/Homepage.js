@@ -120,14 +120,14 @@ const Homepage = (props) => {
 
                 <div>
                 <Slider {...settings}>
-                    <div>
-                    <img className="serviceImgs" src={Manufacturing} />
+                    <div className="imgHolder">
+                        <img className="serviceImgs" src={Manufacturing} alt="serviceImg"/>
                     </div>
-                    <div>
-                        <img className="serviceImgs" src={Installation} />
+                    <div className="imgHolder">
+                        <img className="serviceImgs" src={Installation} alt="installationImg" />
                     </div>
-                    <div>
-                        <img className="serviceImgs" src={Repairing} />
+                    <div className="imgHolder">
+                        <img className="serviceImgs" src={Repairing} alt="repairingImg" />
                     </div>
                 </Slider>
                 </div>
@@ -144,9 +144,9 @@ const Homepage = (props) => {
                 <div className="title">Services</div>
                     <div className="servicesContainer">
                         <div className="servicesImg">
-                            <img className="serviceImgs" src={Manufacturing} />
-                            <img className="serviceImgs" src={Installation} />
-                            <img className="serviceImgs" src={Repairing} />
+                            <img className="serviceImgs" src={Manufacturing} alt="manufacturingImg" />
+                            <img className="serviceImgs" src={Installation} alt="installationImg"/>
+                            <img className="serviceImgs" src={Repairing} alt="reparingImg" />
                         </div>
                     </div>
                 </div>  

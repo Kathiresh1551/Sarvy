@@ -14,7 +14,7 @@ const Applications = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        // centerPadding: "20px",
+        centerPadding: "20px",
       };
 
       console.log(data.map((ele) => ele.name), '<--------------------')
@@ -53,7 +53,7 @@ const Applications = () => {
             </Slider>  */}
             <Slider {...settings} className='sliderContainer'>
             <div className='applicationContainer'>
-                        <img src={Image} className='appImg' />
+                        <img src={Image} className='appImg' alt="appImg"/>
                         <div className='applicationBG'>
                             <div className="applicationName">
                                 Liquid Transfer System
@@ -72,7 +72,7 @@ const Applications = () => {
                     </div>
 
                     <div className='applicationContainer'>
-                        <img src={Image} className='appImg' />
+                        <img src={Image} className='appImg' alt="appImg" />
                         <div className='applicationBG'>
                             <div className="applicationName">
                                 Liquid Transfer System
@@ -92,7 +92,7 @@ const Applications = () => {
 
 
                     <div className='applicationContainer'>
-                        <img src={Image} className='appImg' />
+                        <img src={Image} className='appImg' alt="appImg" />
                         <div className='applicationBG'>
                             <div className="applicationName">
                                 Liquid Transfer System
