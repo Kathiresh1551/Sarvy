@@ -1,36 +1,54 @@
 import { Tab, Tabs } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Manufacturing from '../../assets/images/Manufacturing.png';
 import Installation from '../../assets/images/Installation.png';
 import Repairing from '../../assets/images/Repairing.png';
 import CompanyOverview from './CompanyOverview';
-import Applications from './Applications';
+// import Applications from './Applications';
+import { useLocation } from "react-router-dom";
+import Products from "./Products";
 import './Homepage.scss';
 import Slider from "react-slick";
 
 const Homepage = (props) => {
+    const { history } = props;
     const [subTab, setSubTab] = useState('about')
-
+    const location = useLocation();
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
-      };
+    };
 
     const handleSubTabChange = (ele, newValue) => {
         setSubTab(newValue)
     }
+
+    const productScroll = React.createRef();
+    useEffect(() => {
+        if (location.pathname === '/products') {
+            console.log('------------->');
+            productScroll.current.scrollIntoView({
+                behavior: 'smooth',
+            });
+        }
+    })
+
+    const handelSelectedProduct = (product) => {
+        history.push(`product/${product}`)
+    }
+
 
     return (
         <>
             <div className="homePage">
                 <div className="subTabContainer">
                     <div className="subTab">
-                        <Tabs 
+                        <Tabs
                             value={subTab}
                             onChange={handleSubTabChange}
                             textColor="black"
@@ -45,17 +63,17 @@ const Homepage = (props) => {
                 </div>
 
                 <div>
-                <Slider {...settings}>
-                    <div className="imgHolder">
-                        <img className="serviceImgs" src={Manufacturing} alt="serviceImg"/>
-                    </div>
-                    <div className="imgHolder">
-                        <img className="serviceImgs" src={Installation} alt="installationImg" />
-                    </div>
-                    <div className="imgHolder">
-                        <img className="serviceImgs" src={Repairing} alt="repairingImg" />
-                    </div>
-                </Slider>
+                    <Slider {...settings}>
+                        <div className="imgHolder">
+                            <img className="serviceImgs" src={Manufacturing} alt="serviceImg" />
+                        </div>
+                        <div className="imgHolder">
+                            <img className="serviceImgs" src={Installation} alt="installationImg" />
+                        </div>
+                        <div className="imgHolder">
+                            <img className="serviceImgs" src={Repairing} alt="repairingImg" />
+                        </div>
+                    </Slider>
                 </div>
 
                 <div className="companyOverview">
@@ -63,10 +81,16 @@ const Homepage = (props) => {
                 </div>
 
                 <div className="applications">
-                    <Applications />
-                </div> 
+                    {/* <Applications /> */}
+                </div>
 
-                <div className="services">
+                <div className="ourProducts" ref={productScroll}>
+                    <Products 
+                        handelSelectedProduct={handelSelectedProduct}
+                    />
+                </div>
+
+                {/* <div className="services">
                 <div className="title">Services</div>
                     <div className="servicesContainer">
                         <div className="servicesImg">
@@ -75,7 +99,7 @@ const Homepage = (props) => {
                             <img className="serviceImgs" src={Repairing} alt="reparingImg" />
                         </div>
                     </div>
-                </div>  
+                </div>   */}
             </div>
         </>
     )

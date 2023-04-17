@@ -7,16 +7,30 @@ import './Header.scss';
 
 const Header = (props) => {
     const [activeTab, setActiveTab] = useState('home');
+    const [showProduct, setShowProduct] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState('');
 
     const history = useHistory();
     const location= useLocation();
 
-    console.log(location.pathname);
-
     useEffect(() => {
+        if (location.pathname.includes('/product/')) {
+            if (location.pathname.split('/product/')[1] === 'openwell') {
+                setSelectedProduct('Openwell Submersible Pumps')
+            } else if (location.pathname.split('/product/')[1] === 'industrialMotors') {
+                setSelectedProduct('Industrial Motors')
+            } else if (location.pathname.split('/product/')[1] === 'centrifugalPump') {
+                setSelectedProduct('Centrifugal Pumps')
+            } else if (location.pathname.split('/product/')[1] === 'V4') {
+                setSelectedProduct('V4 Submersible Pumps')
+            } else if (location.pathname.split('/product/')[1] === 'selfPriming') {
+                setSelectedProduct('Self Priming Pumps')
+            }
+            setShowProduct(true)
+        }
         const pathName = location.pathname.replace('/', '');
         setActiveTab(pathName === '' ? 'home' : pathName)
-    }, [])
+    }, [location.pathname])
 
     const handleSelectedTab = (tab) => {
         if (tab === 'products') {
@@ -32,6 +46,7 @@ const Header = (props) => {
         }
         setActiveTab(tab)
     }
+
 
     console.log(activeTab);
     
@@ -101,10 +116,10 @@ const Header = (props) => {
                     <>
                         <div>
                             {
-                                activeTab === 'products' && (
+                                showProduct && (
                                     <>
                                         <div className="currentTabName">
-                                            Products
+                                            {selectedProduct}
                                         </div>
                                     </>
                                 )

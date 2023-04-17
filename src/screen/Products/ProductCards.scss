@@ -3,16 +3,16 @@
 }
 .ourProducts {
     // padding: 0px 100px 0px 100px;
-    width: 98%;
+    width: 95%;
+    overflow: hidden !important;
 }
 .productSlider {
     // position: initial;
 }
 .productCards {
     width: 300px;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     border-radius: 5px;
-
 }
 .productDescCard {
     padding: 30px;
@@ -26,21 +26,21 @@
     justify-content: center;
 }
 .productNo {
-    background: linear-gradient(to right, #6d1851, #373082) !important;;
+    background: linear-gradient(to right, #6d1851, #373082) !important;
     color: white;
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
 }
 .productImage {
-   display: flex;
-   justify-content: center;
-//    background-color: #F7F7F7;
-   padding: 15px;
-//    width: 50%;
+    display: flex;
+    justify-content: center;
+    //    background-color: #F7F7F7;
+    padding: 15px;
+    //    width: 50%;
 }
 .COM {
     display: flex;
-    font-family: 'Sofia Sans';
+    font-family: "Sofia Sans";
     line-height: 50px;
 }
 .title {
@@ -54,7 +54,6 @@
     justify-content: center;
     flex-direction: column;
     padding-left: 15px;
-
 }
 .COMContainer {
     display: flex !important;
@@ -68,7 +67,36 @@
 }
 .COMHeading {
     padding-left: 100px;
-    font-family: 'Sofia Sans' !important;
+    font-family: "Sofia Sans" !important;
     font-size: 30px;
     padding-top: 100px;
+}
+
+.featuresLable {
+    // width: fit-content;
+    width: 54%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 15px 5px 15px !important;
+    // border-width: 3px;
+    // border-style: solid;
+    // background: linear-gradient(to bottom, #6d1851, #373082) !important;
+    // border-image: linear-gradient(to bottom, #6d1851, #373082) 1;
+    background: linear-gradient(to bottom, #6d1851, #373082);
+
+    /* Set the border image with the same gradient */
+    border: 10px solid;
+    border-image: linear-gradient(to bottom, #6d1851, #373082) 1;
+    color: white;
+}
+
+.featuresContainer {
+    display: flex !important;
+    justify-content: flex-end !important;
+    flex-direction: column !important;
+    // align-items: center;
+    text-align: left !important;
+    width: 98%;
+    padding-left: 130px;
+    padding-top: 30px;
 }
